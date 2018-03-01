@@ -7,6 +7,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.item import Item, Field
 
+
 class CrawlerSpider(CrawlSpider):
     name = 'crawler'
     #allowed_domains = ['twitter.com']

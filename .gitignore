@@ -3,3 +3,6 @@ spiders/__pycache__/
 *.pyc
 /*/*.pyc
 /*/*/*.pyc
+
+node_modules/
+package-lock.json

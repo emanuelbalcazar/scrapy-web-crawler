@@ -1,0 +1,30 @@
+{
+    "name": "classifier",
+    "version": "1.0.0",
+    "description": "spider web crawler con clasificación de documentos",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/emanuelbalcazar/scrapy-web-crawler.git"
+    },
+    "keywords": [
+        "scrapy",
+        "crawler",
+        "spider"
+    ],
+    "author": "emanuel balcazar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/emanuelbalcazar/scrapy-web-crawler/issues"
+    },
+    "homepage": "https://github.com/emanuelbalcazar/scrapy-web-crawler#readme",
+    "dependencies": {
+        "grunt": "^1.0.2",
+        "grunt-cli": "^1.2.0",
+        "grunt-shell": "^2.1.0",
+        "time-grunt": "^1.4.0"
+    }
+}
