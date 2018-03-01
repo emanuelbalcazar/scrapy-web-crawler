@@ -4,6 +4,7 @@
     "description": "spider web crawler con clasificación de documentos",
     "main": "index.js",
     "scripts": {
+        "grunt": "node ./node_modules/grunt-cli/bin/grunt",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

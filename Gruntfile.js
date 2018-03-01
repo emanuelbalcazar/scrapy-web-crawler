@@ -15,6 +15,9 @@ module.exports = function (grunt) {
             freeze: {
                 command: 'pip3 freeze > requirements.txt'
             },
+            install: {
+                command: 'pip3 install -r requirements.txt'
+            },
             crawl: {
                 command: 'scrapy crawl crawler -o logs/links-traveled.log -t csv'
             }
@@ -23,7 +26,7 @@ module.exports = function (grunt) {
 
     // register all tasks.
     grunt.registerTask('default', ['shell:crawl']);
-    grunt.registerTask('crawl', ['shell:crawl']);
     grunt.registerTask('freeze', ['shell:freeze']);
-
+    grunt.registerTask('install', ['shell:install']);
+    grunt.registerTask('crawl', ['shell:crawl']);
 };
