@@ -31,3 +31,13 @@ Tener instalado `python 3.x` y en lo posible el `virtualenv 15.x`.
 4. Cambiar al directorio: `cd scrapy-web-crawler/classifier`
 5. Ejecutar: `npm run grunt install` para instalar dependencias de python3. 
 6. Ejecutar: `npm run grunt crawl` para iniciar la ejecución del spider.
+
+## Nota
+
+Ver que el archivo `Gruntfile.js` incluye las siguientes tareas:
+
+* `grunt freeze` - crea un archivo `requirements.txt` con las dependencias del proyecto.
+* `grunt install` - instala las dependencias de python3 segun el archivo `requirements.txt`
+* `grunt crawl` - ejecuta los spiders existentes generando los logs de la ejecución.
+* `grunt list` - lista todos los spiders del proyecto.
+* `grunt check` - verifica si la implementación de los spiders es correcta.

@@ -20,6 +20,12 @@ module.exports = function (grunt) {
             },
             crawl: {
                 command: 'scrapy crawl crawler -o logs/links-traveled.log -t csv'
+            },
+            list: {
+                command: 'scrapy list'
+            },
+            check: {
+                command: 'scrapy check'
             }
         }
     });
@@ -29,4 +35,6 @@ module.exports = function (grunt) {
     grunt.registerTask('freeze', ['shell:freeze']);
     grunt.registerTask('install', ['shell:install']);
     grunt.registerTask('crawl', ['shell:crawl']);
+    grunt.registerTask('list', ['shell:list']);
+    grunt.registerTask('check', ['shell:check']);
 };
