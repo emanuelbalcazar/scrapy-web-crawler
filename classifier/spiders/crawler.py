@@ -6,7 +6,7 @@ from newspaper import Article
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.item import Item, Field
-
+from datetime import datetime
 
 class CrawlerSpider(CrawlSpider):
     name = 'crawler'
@@ -22,6 +22,14 @@ class CrawlerSpider(CrawlSpider):
         article.download()
         article.parse()
         self.logger.info('URL: ' + response.url)
-        self.logger.info('TEXTO EXTRAIDO: ' + article.text)
+
+        file = open("logs/extractions.log", "a")
+        file.write("\n\n[URL]\n")
+        file.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        file.write("\n") 
+        file.write(response.url)
+        file.write("\n") 
+        file.write(article.text)  
+        file.close() 
 
         return item

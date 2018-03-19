@@ -13,19 +13,19 @@ module.exports = function (grunt) {
                 stdout: true
             },
             freeze: {
-                command: 'pip3 freeze > requirements.txt'
+                command: 'echo "\nGenerando requirements.txt\n" && pip3 freeze > requirements.txt'
             },
             install: {
-                command: 'pip3 install -r requirements.txt'
+                command: 'echo "\nInstalando dependencias:\n" && pip3 install -r requirements.txt'
             },
             crawl: {
-                command: 'scrapy crawl crawler -o logs/links-traveled.log -t csv'
+                command: 'echo "\nIniciando ejecucion:\n" && scrapy crawl crawler -o logs/links-traveled.log -t csv'
             },
             list: {
-                command: 'scrapy list'
+                command: 'echo "\nSpiders disponibles:\n" && scrapy list'
             },
             check: {
-                command: 'scrapy check'
+                command: 'echo "\nRevisando la correctitud de los spiders:\n" && scrapy check'
             }
         }
     });
