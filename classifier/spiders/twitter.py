@@ -8,11 +8,10 @@ from scrapy.spiders import CrawlSpider, Rule
 from scrapy.item import Item, Field
 from datetime import datetime
 
-class CrawlerSpider(CrawlSpider):
-    name = 'crawler'
-    #allowed_domains = ['twitter.com']
-    start_urls = ['http://www.twitter.com']
-    
+class TwitterSpider(CrawlSpider):
+    name = 'twitter'
+    start_urls = ['http://www.twitter.com/']
+
     rules = (Rule(LinkExtractor(), callback='parse_item', follow=True), )
 
     def parse_item(self, response):
@@ -22,14 +21,5 @@ class CrawlerSpider(CrawlSpider):
         article.download()
         article.parse()
         self.logger.info('URL: ' + response.url)
-
-        file = open("logs/extractions.log", "a")
-        file.write("\n\n[URL]\n")
-        file.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-        file.write("\n") 
-        file.write(response.url)
-        file.write("\n") 
-        file.write(article.text)  
-        file.close() 
-
+        
         return item
