@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                 command: 'echo "\nInstalando dependencias:\n" && pip3 install -r requirements.txt'
             },
             crawl: {
-                command: 'echo "\nIniciando ejecucion:\n" && scrapy crawl crawler -o logs/links-traveled.log -t csv'
+                command: 'echo "\nIniciando ejecucion:\n" && scrapy crawl crawler'
             },
             list: {
                 command: 'echo "\nSpiders disponibles:\n" && scrapy list'
